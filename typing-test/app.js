@@ -12,10 +12,11 @@ let total = [];
 let play = false;
 let userTypedString = '';
 let time = 60;
+let interval;
 
 const typedPara = [
    {
-      data: `The earliest known appearance`,
+      data: `The earliest`,
    },
 ];
 
@@ -42,6 +43,9 @@ const campareUserString = function () {
    const paraDataAr = typedPara[0].data.split(' ');
 
    if (paraDataAr.length == userTypedVauls.length || time === 0) {
+      // Stop the interval when the typing data is end..
+      clearInterval(interval);
+
       // convert the all values into the aray
       const paraAr = typedPara[0].data.split(' ');
       const usetTypeStringAr = userTypedString.split(' ');
@@ -64,9 +68,8 @@ const campareUserString = function () {
    }
 };
 
-// ---
+// for start and end the timer
 const StartTimerFunction = function () {
-   let interval;
    if (!play) {
       startBtn.textContent = 'stop';
       play = true;
@@ -80,8 +83,8 @@ const StartTimerFunction = function () {
          }
       }, 1000);
    } else {
-      play = false;
       startBtn.textContent = 'Start';
+      play = false;
       clearInterval(interval);
    }
 };
