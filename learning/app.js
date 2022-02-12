@@ -221,3 +221,59 @@
 // arrNew.fill(4, 2);
 // console.log(arr);
 // console.log(arrNew);
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// const result = words.filter((word) => word.length > 6);
+// console.log(result);
+
+// const arr = [1, 2, 4];
+// const newArr = arr.filter((el) => el === 2);
+// const findArr = arr.find((el) => el === 2);
+// console.log(arr.find((el) => el === 0));
+// console.log(arr);
+// console.log(newArr);
+// console.log(findArr);
+
+// console.log(arr.findIndex((el) => el == 4));
+// console.log(arr.findIndex((el) => el === 5));
+
+// const arr = [1, 2, 3, [3, [1, 4], 4]];
+// const arr2 = [0, 1, 2, [[[3, 4]]]];
+// console.log(arr.flat(2));
+// console.log(arr2.flat(3));
+// const array1 = ['a', 'b', 'c'];
+// array1.forEach((element) => console.log(element));
+
+// console.log(Array.from('foo'));
+// console.log(Array.from([1, 2, 3], (x) => x + x));
+
+// const str = 'dheeraj';
+// console.log(Array.from(str, (e) => e == 'h'));
+
+// const array1 = [1, 2, 3];
+// console.log(array1.includes(2));
+// console.log(array1.findIndex((el) => el === 3));
+
+// const arr = Array.isArray([1, 2, 3]); // true
+// const arrNew = Array.isArray({ foo: 123 }); // false
+
+// console.log(arr);
+// console.log(arrNew);
+
+// const elements = ['Fire', 'Air', 'Water'];
+// console.log(elements.join('-'));
+// console.log(elements.keys().next().value);
+
+// for (const [idx, el] of elements.entries()) {
+//    console.log(el);
+// }
+
+// const arr = [1, 2, 3];
+// const newArr = arr.map((el) => el * 2);
+// console.log(newArr);
+
+// const newArrTow = [];
+// for (let i = 0; i < arr.length; i++) {
+//    newArrTow.push(arr[i] * 2);
+// }
+// console.log(newArrTow);
