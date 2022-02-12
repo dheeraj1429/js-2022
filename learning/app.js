@@ -139,3 +139,85 @@
 // console.log(typeof newStr.toString());
 // console.log(newStr.valueOf());
 // console.log(typeof newStr.valueOf());
+
+// const ar = [1, 2, 3];
+// const ar2 = ar;
+// ar2.push(1100);
+
+// console.log(ar);
+// console.log(ar2);
+
+// const obj = {
+//    name: 'dheeraj',
+// };
+
+// const obj2 = obj;
+
+// obj2.name = 'ritki';
+// console.log(obj);
+// console.log(obj2);
+
+// const arr = [1, 2, 3];
+// const obj = new Map([arr]);
+// console.log(Object.assign({}, arr));
+// const obj1 = arr.reduce((a, c) => ({ ...a, [c]: c }));
+
+// console.log(arr);
+// console.log(typeof obj);
+// console.log(obj1);
+
+// let objStore = {};
+// for (let i = 0; i < arr.length; i++) {
+//    objStore[i] = i;
+// }
+
+// console.log(objStore);
+
+// const convertToObj = function (ar) {
+//    const obj = {};
+
+//    ar.forEach((el, i) => {
+//       obj.i = el;
+//    });
+// };
+
+// convertToObj(arr);
+
+// const array1 = ['a', 'b', 'c'];
+// const array2 = ['d', 'e', 'f'];
+// const array3 = array1.concat(array2);
+
+// console.log(array3);
+
+// const arr = [1, 2, 3];
+// console.log(arr);
+// // mute the orignal array
+// console.log(arr.copyWithin(0, 1));
+
+// arr.every((el, idx) => {
+//    console.log(el == 1);
+//    console.log(idx);
+// });
+
+// const arr = [1, 2, 3];
+// console.log(arr.entries().next().value);
+// console.log(arr.entries().next());
+
+// const arr = [1, 2, 3];
+// const obj = {};
+// for (const [el, idx] of arr.entries()) {
+//    obj[el] = idx;
+// }
+
+// console.log(obj);
+
+// const arr = [1, 2, 3];
+// console.log(arr.every((el) => el === 1));
+// console.log(arr.some((el) => el >  1));
+
+// const arr = [1, 2, 4];
+// arr.fill(10, 2);
+// const arrNew = [1, 2, 3, 4, 5, 5, 6, 7];
+// arrNew.fill(4, 2);
+// console.log(arr);
+// console.log(arrNew);
