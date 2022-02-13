@@ -277,3 +277,35 @@
 //    newArrTow.push(arr[i] * 2);
 // }
 // console.log(newArrTow);
+
+// const arr = [1, 2, 3];
+// const newValue = arr.reduce((acc, crv) => {
+//    return acc + crv;
+// });
+// console.log(newValue);
+
+// const array1 = [
+//    [0, 1],
+//    [2, 200, 3],
+//    [4, 5],
+// ];
+
+// const newArr = array1.reduceRight((acc, crv) => acc.concat(crv));
+// console.log(newArr);
+
+// newArr.shift();
+// console.log(newArr);
+// console.log(newArr.reverse());
+// console.log(newArr.slice(0, 4));
+// console.log(newArr.some((el) => el % 2 === 0));
+
+// const sortArr = newArr.sort((a, b) => a - b);
+// console.log(sortArr);
+// console.log(newArr.sort());
+
+// const months = ['March', 'Jan', 'Feb', 'Dec'];
+// console.log(months.sort());
+
+// const months = ['Jan', 'March', 'April', 'June'];
+// months.splice(1, 0, 'Feb');
+// console.log(months);
