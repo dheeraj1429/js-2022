@@ -309,3 +309,88 @@
 // const months = ['Jan', 'March', 'April', 'June'];
 // months.splice(1, 0, 'Feb');
 // console.log(months);
+
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+
+// console.log(Object.assign(target, source));
+
+// const object1 = {
+//    a: 'somestring',
+//    b: 42,
+// };
+
+// console.log(Object.values(object1));
+
+// const obj = {
+//    name: 'dheeraj',
+
+//    getName() {
+//       return this.name;
+//    },
+// };
+
+// console.log(obj.getName());
+
+// console.log(Object.entries(obj));
+
+// const obj = {
+//    age: 22,
+// };
+// const newObj = obj;
+// Object.freeze(obj);
+// newObj.age = 20;
+// console.log(obj);
+// console.log(newObj);
+
+// const entries = new Map([
+//    ['foo', 'bar'],
+//    ['baz', 42],
+// ]);
+
+// const obj = Object.fromEntries(entries);
+// console.log(obj);
+
+// const arr = [
+//    [0, 1],
+//    [1, 2],
+// ];
+
+// console.log(Object.fromEntries(arr));
+
+// const object1 = {
+//    a: 1,
+//    b: 2,
+//    c: 3,
+// };
+
+// console.log(Object.getOwnPropertyNames(object1));
+
+// Destructuring assignment---------------------------------------------------->
+
+const obj = { a: 10, b: 20, c: 30, d: 40 };
+({ a, b } = obj);
+console.log(a, b);
+
+const allFriendsName = ['rohan', 'ritik', 'karan'];
+const [x, ...others] = allFriendsName;
+console.log(x, others);
+
+const getDataFunction = function () {
+   console.log(arguments);
+};
+
+getDataFunction(10, 20);
+
+// Regular expressions -------------------------------------------------------->
+
+/*
+
+g - global 
+i - case insensitive
+m - muitiline
+s - single-line (dotall)
+u - unicode
+y - sticky
+
+*/

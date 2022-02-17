@@ -38,11 +38,40 @@ window.onload = function () {
    */
 
    // Drow a complex line
-   ctx.beginPath();
-   ctx.moveTo(0, 0);
-   ctx.lineTo(100, 200);
-   ctx.lineTo(300, 0);
-   ctx.lineTo(0, 200);
+   // ctx.beginPath();
+   // ctx.moveTo(0, 0);
+   // ctx.lineTo(100, 200);
+   // ctx.lineTo(300, 0);
+   // ctx.lineTo(0, 200);
 
-   ctx.stroke();
+   // ctx.stroke();
+
+   // line cap
+
+   // first line
+   // ctx.beginPath();
+   // ctx.strokeStyle = 'red';
+   // ctx.lineWidth = 10;
+   // ctx.lineCap = 'butt';
+   // ctx.moveTo(400, 100);
+   // ctx.lineTo(200, 100);
+   // ctx.stroke();
+
+   // // second line
+   // ctx.beginPath();
+   // ctx.strokeStyle = 'blue';
+   // ctx.lineCap = 'round';
+   // ctx.lineWidth = 10;
+   // ctx.moveTo(400, 150);
+   // ctx.lineTo(200, 150);
+   // ctx.stroke();
+
+   // // second line
+   // ctx.beginPath();
+   // ctx.strokeStyle = 'green';
+   // ctx.lineWidth = 10;
+   // ctx.lineCap = 'square';
+   // ctx.moveTo(400, 200);
+   // ctx.lineTo(200, 200);
+   // ctx.stroke();
 };
