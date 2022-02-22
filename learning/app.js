@@ -368,19 +368,50 @@
 
 // Destructuring assignment---------------------------------------------------->
 
-const obj = { a: 10, b: 20, c: 30, d: 40 };
-({ a, b } = obj);
-console.log(a, b);
+// const obj = { a: 10, b: 20, c: 30, d: 40 };
+// ({ a, b } = obj);
+// console.log(a, b);
 
-const allFriendsName = ['rohan', 'ritik', 'karan'];
-const [x, ...others] = allFriendsName;
-console.log(x, others);
+// const allFriendsName = ['rohan', 'ritik', 'karan'];
+// const [x, ...others] = allFriendsName;
+// console.log(x, others);
 
-const getDataFunction = function () {
-   console.log(arguments);
+// const getDataFunction = function () {
+//    console.log(arguments);
+// };
+
+// getDataFunction(10, 20);
+
+// convert h1 to span
+// const heading = document.createElement('h1');
+// heading.textContent = 'hello';
+// document.body.append(heading);
+
+// const headData = document.querySelector('h1');
+// const splitData = headData.textContent.split('');
+// const div = document.createElement('div');
+// document.body.append(div);
+
+// splitData.forEach((el) => {
+//    const span = document.createElement('span');
+//    span.textContent = el;
+//    console.log(span);
+//    div.append(span);
+// });
+
+// headData.remove();
+
+// let a, b;
+
+// [a = 1, b = 3] = [1];
+// console.log(a, b);
+
+const fun = function () {
+   return [1, 2];
 };
 
-getDataFunction(10, 20);
+const [a, b] = fun();
+console.log(a, b);
 
 // Regular expressions -------------------------------------------------------->
 
