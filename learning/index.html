@@ -16,12 +16,50 @@
             left: 0;
             background-color: #000;
         }
+
+        .animation_div {
+            margin: 25px;
+            width: 550px;
+            height: 100px;
+            background: orange;
+            position: relative;
+            font-size: 20px;
+        }
+
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes mymove {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 200px;
+            }
+        }
+
+        @keyframes mymove {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 200px;
+            }
+        }
     </style>
 
 
 </head>
 
-<body>
+<body onafterprint="print()" onbeforeunload="leave()">
+
+
+    <div class="animation_div">
+
+    </div>
+
+    <a href="google.com">leave</a>
+
 
     <script src="./app.js"></script>
     <!-- <script src="./canvas.js"></script> -->

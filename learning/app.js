@@ -406,12 +406,65 @@
 // [a = 1, b = 3] = [1];
 // console.log(a, b);
 
-const fun = function () {
-   return [1, 2];
-};
+// const fun = function () {
+//    return [1, 2];
+// };
 
-const [a, b] = fun();
-console.log(a, b);
+// const [a, b] = fun();
+// console.log(a, b);
+
+// Functions --------------------------------------------------------------------->
+
+// const num = 10;
+
+// const mulFunction = function (num) {
+//    return num * num;
+// };
+
+// console.log(mulFunction(num));
+
+// const mycar = { make: 'Honda', model: 'Accord', year: 1998 };
+
+// mycar.getData = function () {
+//    return (this.make = 'bmw');
+// };
+
+// mycar.getData();
+// console.log(mycar);
+
+// let numbers = [0, 1, 2, 5, 10];
+// // Function returns: [0, 1, 8, 125, 1000].
+
+// const map = function (f, a) {
+//    let arr = [];
+//    for (let i = 0; i != a.length; i++) {
+//       arr.push(f(a[i]));
+//    }
+//    console.log(arr);
+// };
+
+// const mulFunction = function (a) {
+//    return a * a * a;
+// };
+
+// map(mulFunction, numbers);
+
+// let a;
+// const fun = function () {
+//    a = 10;
+// };
+
+// fun();
+// console.log(a);
+
+// var b;
+
+// const a = function () {
+//    b = 10;
+// };
+
+// a();
+// console.log(b);
 
 // Regular expressions -------------------------------------------------------->
 
@@ -425,3 +478,41 @@ u - unicode
 y - sticky
 
 */
+
+// java script event lisner ---------------------------------------------------->
+
+// onafterprint -> The event occurs when a page has started printing, or if the print dialogue box has been closed
+
+// print = function () {
+//     alert('document print');
+// };
+
+// animationend -> The event occurs when a CSS animation has completed
+
+// const animationDiv = document.querySelector('.animation_div');
+// const animation = function () {
+//     animationDiv.style.WebkitAnimation = 'mymove 4s ease 2';
+//     animationDiv.style.animation = 'mymove 4s ease 2';
+// };
+
+// animation();
+
+// animationDiv.addEventListener('webkitAnimationStart', function () {
+//     console.log('animation start');
+// });
+// animationDiv.addEventListener('webkitAnimationIteration', function () {
+//     animationDiv.style.backgroundColor = 'red';
+//     console.log('animation repert');
+// });
+// animationDiv.addEventListener('webkitAnimationEnd', function () {
+//     animationDiv.style.backgroundColor = 'blue';
+//     console.log('animation end');
+// });
+
+// onbeforePrint -> the event is fire when the user print the documnet. The event occurs when a page is about to be printed
+
+// onbeforeunload -> The onbeforeunload event occurs when the document is about to be unloaded.
+
+// function leave() {
+//     alert('leave the page');
+// }
