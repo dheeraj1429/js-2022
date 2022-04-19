@@ -14,22 +14,22 @@ let currentSliderLeftRight = 0;
 
 // set dots top to bottom
 const showDotsTopToBottom = function (slider, insert) {
-  slider.forEach((el, i) => {
-    const html = `<i class="fas fa-circle dotsTopSlide" id=${el.id}></i>`;
+    slider.forEach((el, i) => {
+        const html = `<i class="fas fa-circle dotsTopSlide" id=${el.id}></i>`;
 
-    insert.insertAdjacentHTML("beforeend", html);
-  });
+        insert.insertAdjacentHTML("beforeend", html);
+    });
 };
 
 // Set dots left to right
 const showDotsLeftToRight = function (slider, insert) {
-  slider.forEach((el, i) => {
-    const arELm = [...el.classList];
+    slider.forEach((el, i) => {
+        const arELm = [...el.classList];
 
-    const html = `<i class="fas fa-circle dotsLeftToRight ${arELm[1]}" id=${el.id}></i>`;
+        const html = `<i class="fas fa-circle dotsLeftToRight ${arELm[1]}" id=${el.id}></i>`;
 
-    insert.insertAdjacentHTML("beforeend", html);
-  });
+        insert.insertAdjacentHTML("beforeend", html);
+    });
 };
 
 // top to bottom
@@ -43,16 +43,16 @@ const dotsTopSlide = document.querySelectorAll(".dotsTopSlide");
 const dotsLeftToRight = document.querySelectorAll(".dotsLeftToRight");
 
 dotsTopSlide.forEach((item) => {
-  if (item.id == 0) {
-    item.classList.add("activeDot");
-  }
+    if (item.id == 0) {
+        item.classList.add("activeDot");
+    }
 });
 
 // Set slide
 const setSliderPositionOne = function (slider, position) {
-  slider.forEach((el, i) => {
-    el.style.transform = `translate${position}(${100 * el.id}%)`;
-  });
+    slider.forEach((el, i) => {
+        el.style.transform = `translate${position}(${100 * el.id}%)`;
+    });
 };
 
 // set slider position X and Y
@@ -60,79 +60,79 @@ setSliderPositionOne(slider, "Y");
 
 // Slider X position
 const setSliderPositionTwo = function () {
-  sliderOne.forEach((item) => {
-    const ar = [...item.classList];
+    sliderOne.forEach((item) => {
+        const ar = [...item.classList];
 
-    item.style.transform = `translateX(${100 * ar[1]}%)`;
-  });
+        item.style.transform = `translateX(${100 * ar[1]}%)`;
+    });
 };
 
 setSliderPositionTwo();
 
 // Removing the dots class
 const removeDotsClass = function (target) {
-  target.forEach((item) => {
-    item.classList.remove("activeDot");
-  });
+    target.forEach((item) => {
+        item.classList.remove("activeDot");
+    });
 };
 
 // Change slider position
 const changeSlidePosition = function (slider, position, value) {
-  slider.forEach((el, i) => {
-    el.style.transform = `translate${position}(${100 * (i - value)}%)`;
-  });
+    slider.forEach((el, i) => {
+        el.style.transform = `translate${position}(${100 * (i - value)}%)`;
+    });
 };
 
 // Removing Upperyear class
 const removingUpperLayr = function (slider) {
-  slider.forEach((item) => {
-    item.classList.remove("upperLayer");
-  });
+    slider.forEach((item) => {
+        item.classList.remove("upperLayer");
+    });
 };
 
 // Adding class
 const addELemClass = function (slider) {
-  slider.forEach((item) => {
-    item.classList.add("upperLayer");
-  });
+    slider.forEach((item) => {
+        item.classList.add("upperLayer");
+    });
 };
 
 // slode top to bottom
 dotsTopSlide.forEach((el) => {
-  el.addEventListener("click", function (e) {
-    removeDotsClass(dotsTopSlide);
+    el.addEventListener("click", function (e) {
+        removeDotsClass(dotsTopSlide);
 
-    removeDotsClass(dotsLeftToRight);
+        removeDotsClass(dotsLeftToRight);
 
-    removingUpperLayr(sliderOne);
+        removingUpperLayr(sliderOne);
 
-    currentSliderTopBottom = e.target.id;
+        currentSliderTopBottom = e.target.id;
 
-    changeSlidePosition(slider, "Y", currentSliderTopBottom);
+        changeSlidePosition(slider, "Y", currentSliderTopBottom);
 
-    addELemClass(slider);
+        addELemClass(slider);
 
-    e.target.classList.add("activeDot");
-  });
+        e.target.classList.add("activeDot");
+    });
 });
 
 // slide left to right
 dotsLeftToRight.forEach((item) => {
-  item.addEventListener("click", function (e) {
-    removeDotsClass(dotsLeftToRight);
+    item.addEventListener("click", function (e) {
+        removeDotsClass(dotsLeftToRight);
 
-    removeDotsClass(dotsTopSlide);
+        removeDotsClass(dotsTopSlide);
 
-    removingUpperLayr(slider);
+        removingUpperLayr(slider);
 
-    const arELm = [...e.target.classList];
+        const arELm = [...e.target.classList];
 
-    currentSliderLeftRight = arELm[3];
+        currentSliderLeftRight = arELm[3];
 
-    changeSlidePosition(sliderOne, "X", currentSliderLeftRight);
+        changeSlidePosition(sliderOne, "X", currentSliderLeftRight);
 
-    addELemClass(sliderOne);
+        addELemClass(sliderOne);
 
-    e.target.classList.add("activeDot");
-  });
+        e.target.classList.add("activeDot");
+    });
 });
