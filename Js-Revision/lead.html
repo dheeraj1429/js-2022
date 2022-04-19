@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet" />
+    <style>
+      * {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background: #fff !important;
+        margin: 0px !important;
+        padding: 0px !important;
+      }
+
+      header.sectionHeader {
+        padding: 20px 20px;
+        background: #1e1462;
+      }
+
+      .w-100 {
+        width: 100%;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .sectionHeader span {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      main {
+        padding: 0px 10px;
+      }
+
+      .colorMain {
+        color: #1e1462;
+      }
+
+      .sectionText {
+        margin-top: 20px;
+      }
+
+      .sectionText h1 {
+        font-size: 18px;
+      }
+
+      .sectionText .textPara {
+        font-size: 13px;
+        color: #666666;
+      }
+
+      .sectionText .heading2 {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .cardSection {
+        margin-top: 10px;
+      }
+
+      .cardSection .card {
+        position: relative;
+        border: 1px solid #e8e8e8;
+        width: 30%;
+        border-radius: 15px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        margin: 10px 0px;
+      }
+
+      .cardSection .card p {
+        margin: 0px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #222222;
+      }
+
+      .cardSection .inputDiv img {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 15px;
+        width: 15px;
+      }
+
+      .buttonDiv {
+        margin-top: 20px;
+      }
+
+      .mainBtn {
+        display: block;
+        background: #e8e8e8;
+        padding: 10px 0px;
+        border-radius: 5px;
+        border: 0px;
+        color: #fff !important;
+        text-align: center;
+        margin: 10px 0px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .mainBtn.active {
+        display: block;
+        background: #1e1462;
+        padding: 10px 0px;
+        border-radius: 5px;
+        border: 0px;
+        color: #fff !important;
+        text-align: center;
+        margin: 10px 0px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .optionsModal {
+        display: none;
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 5;
+      }
+
+      .selectOptionsDiv {
+        width: 100%;
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        background: #ffffff;
+        z-index: 10;
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+      }
+
+      #courseHeading {
+        color: #222222;
+        font-size: 17px;
+        text-align: start;
+        padding-left: 15px;
+      }
+
+      .closeModalBtn {
+        color: #969696;
+        font-size: 30px;
+        text-align: end;
+        padding-right: 15px;
+      }
+
+      .modalHeading {
+        margin-bottom: 12px;
+      }
+
+      .modalHeading p {
+        margin: 0px !important;
+        font-size: 17px;
+        font-weight: 600;
+        padding-left: 15px;
+      }
+
+      .options {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .option {
+        width: 40%;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 5px 5px;
+        margin: 8px 5px;
+      }
+
+      .option p {
+        font-size: 16px;
+        margin: 0px !important;
+      }
+
+      .activeCard {
+        background-color: #eae7ff;
+        border: 2px solid #1e1464 !important;
+      }
+
+      .activeOption {
+        background-color: #eae7ff;
+        border-color: #1e1464 !important;
+      }
+
+      .wrap {
+        flex-wrap: wrap;
+      }
+
+      .btn_cont {
+        padding: 0 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="sectionHeader">
+      <div class="w-100">
+        <img src="https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/10/leads_logo.png" alt="Udaan" />
+        <span>Powered by LEAD</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="sectionText">
+        <div class="w-100 text-center">
+          <h1 class="colorMain">Welcome to Udaan!</h1>
+          <p class="textPara">Here, you will find courses that you can pursue post school to improve yourself.</p>
+        </div>
+        <div class="w-100">
+          <p class="colorMain text-center heading2">Tell us, what do you like?</p>
+        </div>
+      </section>
+
+      <section class="cardSection">
+        <div class="w-100 d-flex showDiv" style="justify-content: space-around; flex-wrap: wrap">
+          <!-- <div class="card" id="mainCard-1" data-card="English" data-id="1">
+                    <div class="inputDiv">
+                        <img class="uncheckImg mainCard-1-img" src="https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/circle.png">
+                    </div>
+                    <div class="imageDiv">
+                        <img src="https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/blackboard.png">
+                        <p class="data-mainCard-1">English</p>
+                    </div>
+                </div>-->
+        </div>
+        <div class="w-100 buttonDiv">
+          <button class="mainBtn w-100 letsGoBtn">Let's Go</button>
+        </div>
+      </section>
+    </main>
+
+    <section>
+      <div class="selectOptionsDiv">
+        <div class="w-100">
+          <div class="d-flex" style="justify-content: space-between; align-items: center">
+            <div id="courseHeading"></div>
+            <div class="closeModalBtn">&times;</div>
+          </div>
+          <div class="modalHeading w-100">
+            <p>What do you like?</p>
+          </div>
+          <div class="w-100 d-flex wrap optionShowData" style="justify-content: space-around"></div>
+          <div class="btn_cont">
+            <button type="button" class="w-100 mainBtn btnSave">Save</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="optionsModal"></div>
+    <script>
+      let allUserData = [];
+      let userChoise = [];
+
+      const dataJson = [
+        {
+          id: 1,
+          name: 'English',
+          imgSrc: 'https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/blackboard.png',
+          choices: ['Choice 1', 'Choice 2', 'Choice 3'],
+        },
+        {
+          id: 2,
+          name: 'Science',
+          imgSrc: 'https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/coding.png',
+          choices: ['Choice 1', 'Choice 2', 'Choice 3'],
+        },
+        {
+          id: 3,
+          name: 'SST',
+          imgSrc: 'https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/dance.png',
+          choices: ['Choice 1', 'Choice 2', 'Choice 3'],
+        },
+        {
+          id: 4,
+          name: 'Coding',
+          imgSrc: 'https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/blackboard.png',
+          choices: ['Choice 1', 'Choice 2', 'Choice 3'],
+        },
+        {
+          id: 5,
+          name: 'Dance',
+          imgSrc: 'https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/dance.png',
+          choices: ['Choice 1', 'Choice 2', 'Choice 3'],
+        },
+        {
+          id: 6,
+          name: 'French',
+          imgSrc: 'https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/coding.png',
+          choices: ['Choice 1', 'Choice 2', 'Choice 3'],
+        },
+      ];
+
+      const htmlEle = document.querySelector(`.showDiv`);
+
+      dataJson.forEach((ele) => {
+        const htmlData = `
+                <div class="card" id="mainCard-${ele.id}" data-card="${ele.name}" data-id="${ele.id}">
+                    <div class="inputDiv">
+                        <img class="uncheckImg mainCard-${ele.id}-img" src="https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/circle.png">
+                    </div>
+                    <div class="imageDiv">
+                        <img src="${ele.imgSrc}">
+                        <p class="data-mainCard-${ele.id}">${ele.name}</p>
+                    </div>
+                </div> `;
+        htmlEle.insertAdjacentHTML('afterbegin', htmlData);
+      });
+
+      const cardDiv = document.querySelectorAll(`.card`);
+      const modalBg = document.querySelector(`.optionsModal`);
+      const optionDiv = document.querySelector(`.selectOptionsDiv`);
+      const closeBtn = document.querySelector(`.closeModalBtn`);
+      const options = document.querySelectorAll(`.option`);
+      const optionShowDiv = document.querySelector(`.optionShowData`);
+
+      closeBtn.addEventListener(`click`, function () {
+        modalBg.style.display = `none`;
+        optionDiv.style.display = `none`;
+        checkActiveCard();
+        removeActiveCrad();
+      });
+
+      const checkActiveCard = function () {
+        cardDiv.forEach((el) => {
+          el.classList.remove(`activeCard`);
+        });
+      };
+      const removeActiveCrad = function () {
+        options.forEach((el) => {
+          el.classList.remove(`activeOption`);
+        });
+      };
+
+      const showOptionsData = function (element) {
+        optionShowDiv.innerHTML = '';
+        element.forEach((element) => {
+          const optionsHtml = `<div class="option text-center" data-option="${element}"><p>${element}</p></div>`;
+          optionShowDiv.insertAdjacentHTML('afterbegin', optionsHtml);
+        });
+      };
+
+      cardDiv.forEach((ele) => {
+        ele.addEventListener(`click`, function () {
+          const imgDiv = document.querySelector(`.${ele.id}-img`);
+          imgDiv.src = `https://ec2-3-110-33-35.ap-south-1.compute.amazonaws.com/wp-content/uploads/2021/12/check.png`;
+          optionDiv.style.display = `block`;
+          modalBg.style.display = `block`;
+          showOptionsData(dataJson[ele.getAttribute(`data-id`)].choices);
+
+          const data = document.querySelectorAll('.option');
+          const buttonSave = document.querySelector('.btnSave');
+
+          data.forEach((el) => {
+            el.addEventListener('click', function () {
+              userChoise.push({ userData: el.textContent });
+            });
+          });
+
+          buttonSave.addEventListener('click', function () {
+            console.log(userChoise);
+          });
+        });
+      });
+
+      const resumeButton = function () {
+        options.forEach((el) => {
+          if (el.classList.contains(`activeOption`)) {
+            document.querySelector(`.btnSave`).classList.add(`active`);
+            document.querySelector(`.letsGoBtn`).classList.add(`active`);
+          }
+        });
+      };
+
+      document.querySelector(`.optionsModal`).addEventListener(`click`, function () {
+        modalBg.style.display = `none`;
+        optionDiv.style.display = `none`;
+        checkActiveCard();
+        removeActiveCrad();
+      });
+
+      // options.forEach(element => {
+      //   options.addEventListener(`click`, function () {
+      //     removeActiveCrad()
+      //     const optionId = element.getAttribute(`data-option`)
+      //     element.classList.add(`activeOption`)
+      //     resumeButton()
+      //   })
+      // });
+    </script>
+  </body>
+</html>

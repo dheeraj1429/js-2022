@@ -1,0 +1,28 @@
+execution context -> the enviroment in which our code is executed,
+execution context -> global execution context -> the global exectuion context is by default created by browser, and ther exectuion context created every single time a function executed
+
+class stack and memory head -> call stack is a stack a lifo ( last in, first out ) call stack which is used to store all the execution context during the code exectuion.
+we need a place to store the data write information ( variable, array, function.... ) and that time call stack place the ground. the call stack keep traking where we are in the code
+
+memory head is like a big container wher our variable etc store like a box. 
+memory heap a free store the large place which is js v8 provide for use, we can store any kind of data into the memy heap.
+
+exectuion context - there is two phase 
+1 - Creation phase - variable object, shope chain, this
+
+variable object -> for each funtion a property is created in the varible object which is pointing to that funtion.
+for each variable a property created in the variblae object
+which is then set to undefiend.
+
+hoisting ->
+funtion declaration and variblae are moved to the top of the thire scope before the code executed.
+
+this -> the java script this keyword refers to the object it belongs to.
+
+alone, this is refers to the global object. ina a ragulr function, this is refers to global object.
+
+in a method this is refers to owner object.
+means in the object this is refers to the owner object.
+
+
+2 - Exection phase 

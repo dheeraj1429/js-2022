@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video player</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .Container_Div {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+    }
+
+    .videoPlayerDiv {
+      width: 70%;
+      height: 76%;
+      border-radius: 5px;
+      /* overflow: hidden; */
+      position: relative;
+    }
+
+    .videoPlayerDiv video {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+    .Controles {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 12%;
+      background-color: #33323257;
+
+      padding: 0 2rem;
+    }
+
+    .marginClass {
+      margin-right: .8rem;
+    }
+
+    .sound_bar {
+      width: 100px;
+      height: 10px;
+      background-color: rgba(255, 255, 255, 0.301);
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .sound-bar-inner {
+      width: 20%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      transition: all .3s ease;
+    }
+
+    i {
+      color: #fff;
+      cursor: pointer;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+
+    .Select_Option {
+      border: none;
+      padding: .5rem 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .progress_bar {
+      width: 100%;
+      height: 10px;
+      background-color: #e1e1e180;
+      margin: .5rem 0;
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .progress {
+      width: 0;
+      content: "";
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all .3s ease;
+    }
+
+    .Controles_flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="Container_Div">
+    <div class="videoPlayerDiv">
+      <video playsinline class="video" src="./video.mp4"></video>
+
+      <div class="Show_And_Hide_Div_Bar">
+        <div class="Controles">
+          <div class="progress_bar">
+            <div class="progress"></div>
+          </div>
+          <div class="Controles_flex">
+
+            <div class="flex ">
+              <div class="play_div marginClass">
+                <!-- PLay and Pause -->
+                <i class="fas fa-play playButton" title="Play"></i>
+              </div>
+
+              <!-- Sound -->
+              <div class="sound flex">
+                <i class="fas fa-volume-up marginClass soundButton"></i>
+                <div class="sound_bar">
+                  <div class="sound-bar-inner"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex">
+              <!-- Play back speed -->
+              <div class="playBackSpeed marginClass">
+                <select class="Select_Option">
+                  <option class="video_playBack_Class" value="0.5">-0.5</option>
+                  <option class="video_playBack_Class" value="1" selected>1</option>
+                  <option class="video_playBack_Class" value="1.5">1.5</option>
+                  <option class="video_playBack_Class" value="2">2</option>
+                  <option class="video_playBack_Class" value="2.5">2.5</option>
+                </select>
+              </div>
+
+              <!-- Duration -->
+              <div class="duration marginClass">
+                <div class="durations-Speed flex">
+                  <p class="current_time">0:12 / </p>
+                  <p class="total_time">2:22</p>
+                </div>
+              </div>
+
+              <!-- Full Screen -->
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

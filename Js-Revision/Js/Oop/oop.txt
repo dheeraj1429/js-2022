@@ -1,0 +1,62 @@
+Oop -> Object oriented programming (OOP) is a programming  based on the concept of objects
+
+Paradigm -> Style of code "How" we write and organze code
+
+Objects may contain data (Properites) and code (methods). By using objects, we pack data and the corresoinding behavior into one block.
+
+in Oop, objects are self-contained pieces/block of code,
+
+Objects are building blocks of applications, and interact with one another,
+
+
+instance is the real object that can use this object into our code, which was created from the class.
+
+
+
+Abstraction -> Ignoring or hiding details that don't matter, allowing us to get overview perspective of the theing we're implementing, instaed to messing with details that don't really matter to our implementation
+
+some detils is don't matter to show, mean a user used his phone but the don't know what gooing on inside the phone and which type of functions running behind the seen. so abstraction looks similr.
+
+Encasulation -> Keeping properties and methods private inside the calss, so they are not accessible from outside the class. Some methods can be exposed as a public interface (API)
+
+Inheritance -> Making all properties and methods of a certain class available to a child class
+
+Polimorphism -> A child class can overwrite a methods it inherited from ta parent class.
+
+Prototypes -> all objects are linked to a Prototypes object. and we can say each object is a Prototypes
+
+Prototype Inheritance ->  the Prototypes object cantains methods and properties, and the all the object linked to that Prototype object has access and use. 
+
+Object (Instances) are Inheritance from a class, which function like a blueprint.
+
+the New keyword ->
+new person('dheeraj','1999') ?  
+
+when ever we just use the new keyword what happen behind the seene
+1 - New empty object is created
+2 - function is called and point that funtion into the empty object ( which is created before )
+3 - the empty object linked to the Prototype.
+4 - function automatically return that empty object
+
+-------------------------------------------------------------
+
+const Person = function (name, birthyear) {
+
+  (the this keyword return the empty object.)
+
+  this.name = name;
+  this.birthyear = birthyear;
+  
+  (an we point the function arguments into that object with the help of this keyword)
+
+  console.log(this);
+};
+
+new Person('demo', 1999);
+
+
+-------------------------------------------------------------
+
+1 - classes are not hoisted even the classes is class declration
+2 - class are firs-class citizes
+3 - classes are executed in strict mode.

@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SliderContainer {
+  width: 1500px;
+  margin: auto;
+  height: 870px;
+  transform: scale(0.7);
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.topToBottonSlide img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.leftToRightSlide img {
+  transition: all 0.3s ease;
+}
+
+.leftToRightSlide img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.SliderButtonTopToButton {
+  position: absolute;
+  top: 40%;
+  right: 30px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SliderLeftToRight {
+  position: absolute;
+  bottom: 20px;
+  right: 45%;
+  color: #e1e1e18c;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SliderLeftToRight i {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.SliderButtonTopToButton i {
+  margin: 1rem 0;
+  cursor: pointer;
+  color: #e1e1e18c;
+}
+
+.activeDot {
+  color: #fff !important;
+  font-size: 1.3rem;
+}
+
+/*  */
+.upperLayer {
+  z-index: 100;
+}
