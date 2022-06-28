@@ -1,0 +1,23 @@
+footer .footer-top {
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/footer-backedn.png);
+    padding: 2rem;
+}
+
+footer .footer-top p {
+    margin-top: 1rem;
+    font-size: 15px;
+    line-height: 29px;
+}
+
+footer .footer-link p {
+    font-size: 20px;
+}
+
+footer .dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+}

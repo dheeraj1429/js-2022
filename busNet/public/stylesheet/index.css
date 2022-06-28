@@ -1,0 +1,316 @@
+/* home css */
+.navbar {
+    border-bottom: 1px solid var(--gray-cl);
+}
+.navbar .nav-link {
+    font-weight: 400;
+    color: var(--dark-cl) !important;
+    margin-right: 1rem;
+    font-size: 19px;
+}
+/* home css */
+
+/* banner-section */
+.banner-section {
+    width: 100%;
+    height: 900px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/home-banner.png);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.banner-section .banner-content {
+    padding-top: 150px;
+}
+
+.banner-section h4 {
+    font-weight: 400;
+    font-size: 55.1887px;
+}
+
+.banner-section h2 {
+    font-weight: 600;
+    font-size: 74.19px;
+    color: var(--dark-blue);
+}
+
+.banner-section p {
+    font-size: 19.66px;
+}
+/* banner-section */
+
+/* Our Core Services */
+.our-core-services {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/savesas\ 1.png);
+}
+.our-core-services .image-box {
+    width: 100%;
+    height: 900px;
+    background-image: url(../images/asa1.png);
+    background-position: bottom;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.our-core-services .image-box > div {
+    max-width: 400px;
+}
+
+.our-core-services .image-box h5 {
+    color: var(--dark-cl);
+    font-size: 42px;
+    margin: 0.5rem 0;
+}
+.our-core-services .image-box h5 span {
+    color: var(--dark-blue);
+}
+.our-core-services .image-box p {
+    font-size: 17.6604px;
+    line-height: 28px;
+    margin: 0.5rem 0;
+}
+.line_div {
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-blue);
+    border-radius: 30px;
+}
+.sm-line {
+    width: 60%;
+}
+.sm-line-two {
+    max-width: 40%;
+    margin: auto;
+}
+.card-div {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--dark-blue);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    height: 100%;
+}
+.card-div h4 {
+    color: var(--main-cl);
+    margin-top: 1.4rem;
+}
+.card-div p {
+    color: var(--main-cl);
+    font-weight: 300;
+    margin: 0;
+    margin-top: 1rem;
+}
+/* Our Core Services */
+
+/* About Us */
+.about-up {
+    position: relative;
+    padding-bottom: 150px;
+}
+.phone-three {
+    position: absolute;
+    bottom: -200px;
+    z-index: -1;
+}
+.about-up h5 {
+    font-size: 28px;
+}
+.about-up h3 {
+    color: var(--dark-cl);
+    font-weight: 600;
+    font-size: 42px;
+}
+.about-up h3 span {
+    color: var(--dark-blue);
+}
+.about-up p {
+    margin-top: 1rem;
+    font-size: 17.6604px;
+    line-height: 30px;
+}
+/* About Us */
+
+/* Technology Stack */
+.technology_stack {
+    position: relative;
+}
+.technology_stack .tab_div {
+    width: 100%;
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 1rem;
+}
+.technology_stack .tab_div p {
+    margin: 0;
+    color: var(--main-cl);
+}
+.technology_stack .light-tab {
+    background-color: var(--main-cl);
+    border-left: 2px solid var(--dark-blue);
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+}
+.technology_stack .light-tab p {
+    color: var(--dark-cl);
+}
+.bg_iamge_div {
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+}
+/* Technology Stack */
+
+/* Our Software */
+
+/* Our Software */
+
+/* We Work In */
+.tab-content-section h2 {
+    font-weight: 600;
+    font-size: 42px;
+    color: var(--dark-blue);
+}
+.tab-content-section p {
+    font-size: 17px;
+    line-height: 31px;
+}
+.seaech_tabs_div {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8.88889px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.seaech_tabs_div .dot-div {
+    width: 20px;
+    height: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+}
+.seaech_tabs_div p {
+    margin: 0;
+    color: var(--main-cl);
+}
+/* We Work In */
+
+/* Help Us To Improve Our Service Quality */
+.help-up {
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/savesas\ 1.png);
+    background-repeat: no-repeat;
+}
+.help-up h1 {
+    font-weight: 600;
+    font-size: 53px;
+}
+.help-up h1 span {
+    color: var(--dark-blue);
+}
+.tabs_div {
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+    padding: 0.7rem 2rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.tab-active {
+    background-color: var(--dark-blue);
+}
+.tabs_div .tab-icon-div {
+    width: 20%;
+}
+.tabs_div h3 {
+    font-size: 19px;
+}
+/* Help Us To Improve Our Service Quality */
+
+/* Frequently Asked Questions */
+.question_section h3 {
+    font-size: 41px;
+    margin-bottom: 2rem;
+}
+.accordion-header [aria-expanded="true"] {
+    background-color: var(--dark-blue);
+    color: var(--main-cl);
+}
+.accordion-header [aria-expanded="false"] {
+    border: 1px solid var(--dark-blue);
+}
+.accordion-button::after {
+    background-image: url(../images/ant-design_plus-circle-outlined.png);
+}
+.question_section .accordion-item .accordion-button {
+    border-radius: 15px;
+}
+.question_section .accordion-body {
+    border: none;
+}
+.question_section .accordion-item {
+    border: none;
+}
+/* Frequently Asked Questions */
+
+/* why choose us */
+.why_choose_us {
+    background-image: url(../images/doted-background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.why_choose_us .phone-one {
+    position: absolute;
+    top: -200px;
+}
+.phone-tow {
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+}
+.banner-div {
+    width: 100%;
+    box-shadow: 0px 0px 15.4062px 3.42359px rgba(0, 0, 0, 0.25);
+    border-radius: 14.5503px;
+    /* padding: 3rem 1rem; */
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--main-cl);
+    position: relative;
+}
+.sm-cards-div p {
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+/* why choose us */
+
+/* Let Us Bring Our Visions Together  */
+.let_us_bring {
+    padding: 5rem 0;
+    background-color: var(--dark-blue);
+}
+.let_us_bring h4 {
+    font-weight: 600;
+    font-size: 47px;
+    margin-bottom: 2rem;
+    color: var(--main-cl);
+}
+/* Let Us Bring Our Visions Together  */

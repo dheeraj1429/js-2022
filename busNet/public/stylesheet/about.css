@@ -1,0 +1,79 @@
+/* about_banner */
+.about_banner {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/bg.png);
+}
+.about_banner h4 {
+    font-weight: 600;
+    font-size: 48px;
+}
+.about_banner span {
+    color: var(--dark-blue);
+}
+.book_div {
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+}
+/* about_banner */
+
+/* Our Vision */
+.Our_vision {
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/doted-background.png);
+}
+.Our_vision h5 {
+    font-size: 28px;
+    border-bottom: 3px solid var(--dark-blue);
+    width: max-content;
+}
+.Our_vision h2 {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 56px;
+}
+.Our_vision h2 span {
+    color: var(--dark-blue);
+}
+.Our_vision p {
+    font-size: 17.6604px;
+    line-height: 40px;
+}
+.play_button_div h4 {
+    font-size: 17.6604px;
+}
+.play_button_div img {
+    cursor: pointer;
+}
+/* Our Vision */
+
+/* Explore our work */
+.explore_our_work h2 {
+    font-size: 35.9477px;
+}
+.explore_our_work .sm-line-three {
+    max-width: 200px;
+    margin: auto;
+}
+.explore_our_work .card_div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.explore_our_work .car_content {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: var(--main-cl);
+}
+.explore_our_work .car_content p {
+    cursor: pointer;
+}
+/* Explore our work */

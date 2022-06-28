@@ -1,0 +1,17 @@
+.get-button {
+    border: 1px solid var(--dark-cl);
+    padding: 0.7rem 2.2rem;
+    border-radius: 30px;
+}
+.read-more {
+    padding: 0.8rem 4rem;
+    border-radius: 30px;
+    color: var(--main-cl);
+    background-color: var(--dark-blue);
+    border: none;
+    font-size: 13.2453px;
+}
+.white_button {
+    background-color: var(--main-cl);
+    color: var(--dark-cl);
+}

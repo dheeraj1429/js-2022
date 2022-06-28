@@ -1,0 +1,15 @@
+.shop_now {
+    padding: 1rem 3rem;
+    background-color: var(--dark-cl);
+    color: var(--main-cl);
+    border: none;
+}
+.new_shop_button {
+    background-color: var(--light-red);
+    border-radius: 10px;
+}
+.line_button {
+    background-color: transparent;
+    border: 1px solid var(--main-cl);
+    border-radius: 10px;
+}

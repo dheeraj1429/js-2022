@@ -1,0 +1,66 @@
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* colors */
+:root {
+    --dark-cl: #000000;
+    --dark-gray-cl: #544f48;
+    --drak-clound-cl: #1b2020;
+    --gray-cl: #565656;
+    --main-cl: #ffffff;
+    --link-pink: #deb99b;
+    --yellow-cl: #fdb702;
+    --gray-spac-cl: #5c5c5c;
+    --light-red: #ff2241;
+    --light-gray-cl: #d9d9d9;
+    --light-pink-cl: #fbeee2;
+}
+/* colors */
+
+/* fonts */
+@font-face {
+    font-family: SpaceGrotesk-bold;
+    src: url(../fonts/spacegrotesk/SpaceGrotesk-Bold.otf);
+}
+@font-face {
+    font-family: SpaceGrotesk-light;
+    src: url(../fonts/spacegrotesk/SpaceGrotesk-Light.otf);
+}
+@font-face {
+    font-family: SpaceGrotesk-medium;
+    src: url(../fonts/spacegrotesk/SpaceGrotesk-Medium.otf);
+}
+@font-face {
+    font-family: SpaceGrotesk-regular;
+    src: url(../fonts/spacegrotesk/SpaceGrotesk-Regular.otf);
+}
+/* fonts */
+
+/* global classes */
+a {
+    text-decoration: none;
+}
+
+.side_padding {
+    padding: 0 150px;
+}
+
+.side_padding_one {
+    padding: 0 100px;
+}
+
+.side_padding_two {
+    padding: 0 300px;
+}
+/* global classes */
