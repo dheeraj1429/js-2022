@@ -1,0 +1,45 @@
+footer {
+    background-color: var(--dark-cl);
+}
+
+footer p {
+    color: var(--light-white-cl);
+    font-family: SpaceGrotesk-light;
+}
+
+footer h5 {
+    color: var(--main-cl);
+    font-family: SpaceGrotesk-medium;
+}
+
+.sub_div {
+    width: 100%;
+    height: 60px;
+}
+
+.sub_div input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 1rem;
+    outline: none;
+}
+
+.sub_div {
+    display: flex;
+}
+
+.sub_div input::placeholder {
+    font-family: SpaceGrotesk-light;
+}
+
+.sub_div .subscribe_button {
+    padding: 1rem 3rem;
+    border: none;
+    background-color: var(--light-red);
+    color: var(--main-cl);
+}
+
+.second_footer {
+    border-top: 1px solid var(--gray-cl);
+}

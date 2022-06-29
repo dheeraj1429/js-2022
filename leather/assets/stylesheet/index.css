@@ -253,4 +253,58 @@
     line-height: 35px;
     color: var(--gray-cl);
 }
+.bag-icon-div {
+    border: 1px solid var(--light-gray-cl);
+    border-radius: 10px;
+}
+.bag-icon-div h3 {
+    font-size: 30px;
+    font-family: SpaceGrotesk-bold;
+}
+.border-left {
+    border-right: 1px solid var(--light-gray-cl);
+}
+.why_leather_right span {
+    color: var(--light-red);
+    font-size: 25px;
+    font-family: SpaceGrotesk-medium;
+}
+.hover_image_div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.hover_image_div .hover-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.hover-icon img {
+    width: 50px;
+}
+.hover_image_div::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray-cl);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.hover_image_div:hover::before {
+    opacity: 0.6;
+    visibility: visible;
+}
+.hover_image_div:hover.hover_image_div .hover-icon {
+    visibility: visible;
+    opacity: 1;
+}
 /*  WHY LEATHER RIGHT */
