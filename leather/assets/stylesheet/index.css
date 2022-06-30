@@ -1,4 +1,10 @@
 /* banner slider section */
+.logo {
+    width: 100%;
+}
+.navbar-brand {
+    width: 15%;
+}
 .banner_slider_section {
     height: 700px;
     width: 100%;
@@ -25,10 +31,13 @@
     font-family: SpaceGrotesk-light;
     line-height: 32px;
 }
+.banner_slider_section {
+    display: flex !important;
+}
 .slider_dots {
-    position: absolute;
-    bottom: 40px;
-    left: 20%;
+    /* position: absolute; */
+    /* bottom: 40px; */
+    /* left: 20%; */
     display: flex;
 }
 .slider_dots .dot {
@@ -55,7 +64,32 @@
 /* banner cards section */
 .banner-card img {
     cursor: pointer;
+    position: relative;
 }
+
+.banner-card .hover_image {
+    position: relative;
+}
+
+.banner-card .hover_images {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--light-gray-cl);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.banner-card .hover_image:hover .hover_images {
+    visibility: visible;
+    opacity: 0.4;
+    cursor: pointer;
+    width: 100%;
+}
+
 /* banner cards section */
 
 /* category cards */
@@ -68,7 +102,34 @@
     padding: 3rem 3rem;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
+.category_div_inner:hover {
+    box-shadow: 11px 7px 54px 11px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 11px 7px 54px 11px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 11px 7px 54px 11px rgba(0, 0, 0, 0.24);
+}
+/* .category-card:hover::after {
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+.category-card::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background-color: var(--light-gray-cl);
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform-origin: center bottom;
+} */
 .cat-one {
     background-image: url(../images/cat-one.png);
 }
@@ -100,11 +161,13 @@
     text-align: center;
     border-radius: 10px;
 }
+
 .category_cards .category-content-div h4 {
     font-weight: 500;
     font-size: 20px;
     font-family: SpaceGrotesk-medium;
 }
+
 .category_cards .category-content-div p {
     font-size: 16px;
 }
@@ -118,6 +181,11 @@
 }
 .best_seller_inenr > div img {
     height: 500px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.best_seller_inenr > div:hover img {
+    transform: scale(1.1);
 }
 .best_seller_inenr {
     width: 100%;

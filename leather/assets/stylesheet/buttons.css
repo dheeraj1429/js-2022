@@ -7,9 +7,18 @@
 .new_shop_button {
     background-color: var(--light-red);
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.new_shop_button:hover {
+    background-color: var(--yellow-cl);
 }
 .line_button {
     background-color: transparent;
     border: 1px solid var(--main-cl);
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.line_button:hover {
+    color: var(--dark-cl);
+    background-color: var(--main-cl);
 }
