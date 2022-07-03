@@ -1,0 +1,68 @@
+.server_banner {
+    background-image: url(../images/server.png);
+}
+.server_banner h5 {
+    font-size: 38px;
+    font-weight: 300;
+}
+.info_card {
+    position: relative;
+}
+
+.server .phone-one {
+    position: absolute;
+    top: -65px;
+}
+
+.server .phone-tow {
+    position: absolute;
+    bottom: -84px;
+    right: 0;
+}
+
+.info_card .bottom_div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #095a905b;
+}
+.bottom_div img {
+    margin-top: -60px;
+}
+
+.tec {
+    background-image: url(../images/17973908\ 1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.cms-icons {
+    background-color: var(--main-color);
+    box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.11);
+    width: 100%;
+    height: 100%;
+}
+
+/* Help Us */
+.help_us h1 {
+    font-weight: 600;
+    font-size: 53px;
+}
+.help_us span {
+    color: var(--dark-blue);
+}
+.help_us p {
+    font-weight: 400;
+    line-height: 31px;
+}
+.testimonial_card {
+    width: 100%;
+    height: 600px;
+    background-color: var(--dark-blue);
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+/* Help Us */

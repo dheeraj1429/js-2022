@@ -1,0 +1,56 @@
+.productsBanner_section {
+    background-image: url(../images/products.png);
+}
+.filer_div {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d9d9d9;
+}
+.filer_div h5 {
+    font-size: 18px;
+    font-family: SpaceGrotesk-light;
+    color: var(--dark-gray-cl);
+    cursor: pointer;
+}
+.margin_div h5 {
+    margin-bottom: 1.2rem !important;
+}
+.dress {
+    cursor: pointer;
+}
+.filter h3 {
+    color: var(--light-red);
+    font-size: 20px;
+}
+.filer_div .checkBox {
+    transform: scale(1.4);
+}
+.filter_tabs {
+    padding: 1rem;
+    border: 1px solid var(--light-white-cl);
+    cursor: pointer;
+}
+.filer_div h5 {
+    margin-bottom: 0;
+}
+.filter_active {
+    background-color: var(--dark-cl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.filter_active h5 {
+    color: var(--main-cl);
+}
+
+.pagination h5 {
+    color: var(--light-white-cl);
+    margin: 0 1rem;
+    letter-spacing: 12px;
+}
+
+.acrive_tb {
+    color: var(--dark-cl) !important;
+}

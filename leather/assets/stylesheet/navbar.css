@@ -38,12 +38,13 @@
 }
 
 .second_header .nav-item .search-bar-div {
-    border: 1px solid var(--light-gray-cl);
+    /* border: 1px solid var(--light-gray-cl); */
     margin-left: 1rem;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f4f3f3;
 }
 
 .second_header .search-bar-div input {
@@ -52,6 +53,7 @@
     border: none;
     outline: none;
     padding: 1rem;
+    background-color: transparent;
 }
 
 .second_header .nav-item .search_icon_div {

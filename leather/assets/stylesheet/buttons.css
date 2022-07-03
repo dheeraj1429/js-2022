@@ -22,3 +22,10 @@
     color: var(--dark-cl);
     background-color: var(--main-cl);
 }
+.pr_button {
+    border: 1px solid var(--light-white-cl);
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 1rem 3rem;
+    color: var(--light-white-cl);
+}

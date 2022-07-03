@@ -10,10 +10,18 @@
     width: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url(../images/home-page-banner.png);
     display: flex;
     align-items: center;
     position: relative;
+}
+.first_banner {
+    background-image: url(../images/home-page-banner.png);
+}
+.second_banner {
+    background-image: url(../images/man.png);
+}
+.three_banner {
+    background-image: url(../images/child.png);
 }
 .banner_slider_section h5 {
     font-weight: 600;
