@@ -1,5 +1,7 @@
 .server_banner {
-    background-image: url(../images/server.png);
+    background-image: url(../images/service-page.png);
+    display: flex;
+    justify-content: start;
 }
 .server_banner h5 {
     font-size: 38px;
@@ -35,6 +37,12 @@
     background-image: url(../images/17973908\ 1.png);
     background-position: center;
     background-size: cover;
+    mix-blend-mode: normal;
+}
+
+.tec .phone-tow {
+    position: absolute;
+    bottom: -56px;
 }
 
 .cms-icons {
@@ -45,6 +53,11 @@
 }
 
 /* Help Us */
+.help_us {
+    background-image: url(../images/im.png);
+    background-position: center;
+    background-size: cover;
+}
 .help_us h1 {
     font-weight: 600;
     font-size: 53px;
@@ -66,3 +79,51 @@
     align-items: center;
 }
 /* Help Us */
+
+/* Service We Provide  */
+.server_cards {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-cl);
+    box-shadow: 4px 6px 35px rgba(157, 205, 236, 0.35);
+    z-index: 100;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.server_cards:hover {
+    background-color: var(--dark_blue_cl);
+}
+.server_cards:hover p {
+    color: var(--main-cl);
+}
+.server_cards:hover h5 {
+    color: var(--main-cl);
+}
+.server_cards:hover .ln {
+    background-color: var(--main-cl);
+}
+.server_cards:hover .read_more {
+    background-color: var(--main-cl);
+}
+.service_section .phone-one {
+    top: 15px;
+}
+.server_cards h5 {
+    color: var(--dark_blue_cl);
+    font-size: 20px;
+}
+.server_cards .ln {
+    max-width: 30%;
+    height: 2px;
+    background-color: var(--dark_blue_cl);
+    margin: auto;
+}
+.server_cards p {
+    color: var(--smooth_gray);
+    font-size: 20px;
+    line-height: 33px;
+}
+.technology_stack {
+    background-color: rgba(255, 255, 255, 0.722);
+}
+/* Service We Provide  */

@@ -1,26 +1,29 @@
 /* about_banner */
 .about_banner {
-    height: 600px;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../images/bg.png);
+    background-image: url(../images/Group\ 1000002056.png);
 }
 .about_banner h4 {
     font-weight: 600;
     font-size: 48px;
 }
+
 .about_banner span {
     color: var(--dark-blue);
 }
+
 .book_div {
     position: absolute;
     right: 0;
     bottom: -200px;
 }
+
 /* about_banner */
 
 /* Our Vision */
@@ -28,7 +31,16 @@
     background-position: center;
     background-size: cover;
     background-image: url(../images/doted-background.png);
+    position: relative;
 }
+
+.Our_vision .image {
+    position: absolute;
+    top: -400px;
+    right: 0;
+    z-index: -1;
+}
+
 .Our_vision h5 {
     font-size: 28px;
     border-bottom: 3px solid var(--dark-blue);
@@ -75,5 +87,8 @@
 }
 .explore_our_work .car_content p {
     cursor: pointer;
+}
+.all_members img {
+    margin-top: -200px;
 }
 /* Explore our work */

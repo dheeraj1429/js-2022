@@ -15,6 +15,10 @@ footer .footer-link p {
     font-size: 20px;
 }
 
+footer-link {
+    flex-wrap: wrap;
+}
+
 footer .dot {
     width: 10px;
     height: 10px;

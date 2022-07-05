@@ -1,0 +1,82 @@
+@media (max-width: 1700px) {
+    .bg_iamge_div {
+        position: absolute;
+        right: 0;
+        bottom: -297px;
+    }
+    .banner-div {
+        padding-bottom: 2rem;
+    }
+    .phone-tow {
+        bottom: 0px;
+    }
+    .about-up h3 {
+        font-size: 32px;
+    }
+    .about-up p {
+        font-size: 13.6604px;
+        line-height: 20px;
+    }
+    .phone-three {
+        position: absolute;
+        bottom: -62px;
+    }
+    .let_us_bring h4 {
+        font-size: 33px;
+    }
+    .banner-section h4 {
+        font-size: 36.1887px;
+    }
+    .banner-section h2 {
+        font-size: 56.19px;
+    }
+    .banner-section p {
+        font-size: 16.66px;
+    }
+    .our-core-services .image-box p {
+        font-size: 15.6604px;
+        line-height: 23px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .side_padding {
+        padding: 0px 40px;
+    }
+    /* .why_choose_us span {
+        font-size: 13px;
+    } */
+    .tabs_div h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+    .side_padding {
+        padding: 0px 50px;
+    }
+    .question_section h3 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs_div {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .let_us_bring h4 {
+        font-size: 27px;
+    }
+    footer .footer-top p br {
+        display: none;
+    }
+    footer .footer-link p {
+        font-size: 17px;
+    }
+}

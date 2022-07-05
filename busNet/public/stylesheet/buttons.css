@@ -15,3 +15,10 @@
     background-color: var(--main-cl);
     color: var(--dark-cl);
 }
+.read_more {
+    padding: 0.8rem 3rem;
+    border: 2px solid var(--dark-blue);
+    border-radius: 11px;
+    background-color: transparent;
+    color: var(--dark-blue);
+}
