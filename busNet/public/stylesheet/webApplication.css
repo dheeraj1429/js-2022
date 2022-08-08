@@ -1,0 +1,30 @@
+.web-banner {
+    color: var(--dark_blue_cl);
+}
+.about_team h1 {
+    font-size: 60px;
+}
+.about_team h1 span {
+    color: var(--dark_blue_cl);
+}
+.about_team p {
+    font-size: 20px;
+}
+.para-card {
+    background: rgba(255, 255, 255, 0.85);
+    mix-blend-mode: normal;
+    -webkit-box-shadow: 2px 4px 52px -21px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 4px 52px -21px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 4px 52px -21px rgba(0, 0, 0, 0.75);
+}
+.para-card .tabs_inner_content {
+    padding: 1rem;
+    background-color: #e5f5ff;
+}
+.para-card .tabs_inner_content p {
+    color: var(--dark_blue_cl);
+    font-weight: 500;
+}
+.enterprice_solutions h5 {
+    color: var(--dark_blue_cl);
+}

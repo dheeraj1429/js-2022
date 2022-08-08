@@ -37,6 +37,9 @@
         font-size: 15.6604px;
         line-height: 23px;
     }
+    .phone-three img {
+        width: 374px;
+    }
 }
 
 @media (max-width: 1500px) {
@@ -61,11 +64,42 @@
     .question_section h3 {
         font-size: 29px;
     }
+    .tab-content-section h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .tabs_div {
+        padding: 0.7rem 0.8rem;
+    }
+    .bg_iamge_div img {
+        float: right;
+    }
+    .bg_iamge_div img {
+        width: 80%;
+    }
 }
 
 @media (max-width: 768px) {
     .tabs_div {
         max-width: 100%;
+    }
+    .banner-section h2 {
+        font-size: 43.19px;
+    }
+
+    .bg_iamge_div img {
+        width: 60%;
+    }
+    .sm-line {
+        margin: auto;
+    }
+    .line_div {
+        margin: auto;
+    }
+    .tabs_div .tab-icon-div {
+        width: 10%;
     }
 }
 
@@ -78,5 +112,59 @@
     }
     footer .footer-link p {
         font-size: 17px;
+    }
+}
+
+@media (max-width: 550px) {
+    .our-core-services .image-box h5 {
+        color: var(--dark-cl);
+        font-size: 29px;
+        margin: 0.5rem 0;
+    }
+    .our-core-services .image-box {
+        height: 835px;
+    }
+}
+
+@media (max-width: 500px) {
+    .phone-three img {
+        width: 269px;
+    }
+    .about-up {
+        padding-bottom: 0px;
+    }
+    .let_us_bring h4 {
+        font-size: 24px;
+    }
+    .side_padding {
+        padding: 0 10px;
+    }
+    .phone-one img {
+        width: 40%;
+    }
+    .our_software img {
+        position: relative;
+        z-index: 10;
+    }
+    .banner-section {
+        height: 416px;
+    }
+    .banner-section .banner-content {
+        padding-top: 61px;
+    }
+    .banner-section h2 {
+        font-size: 31.19px;
+    }
+    .banner-section p {
+        font-size: 14.66px;
+    }
+    .banner-section h4 {
+        font-size: 29.1887px;
+    }
+    .about-up h3 {
+        font-size: 23px;
+    }
+    .nav-item {
+        text-align: center;
     }
 }

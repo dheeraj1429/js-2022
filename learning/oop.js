@@ -22,7 +22,6 @@ class App {
         // logout logic
     }
 }
-
 /*
 In OOP object are self-contained pieces/block of code;
 
@@ -78,7 +77,7 @@ A child class can overwirte a methos it inherited from a parent class. in a chil
 
 /*
 Object ( instance ) are instantianted from a class, which fuction like a blueprint. when we create new instance of the class this process called "INSTANTIANTION" 
-
+  
 PROTOTYPES IN JAVASCRIPT - 
 
 all object are linked to a prototype object.

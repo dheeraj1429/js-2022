@@ -205,4 +205,194 @@ class ParternNewClass {
 }
 
 const prObject = new ParternNew();
-console.log(prObject);
+// console.log(prObject);
+
+///////////////////////////////////////////////
+
+// Explain Function.prototype.bind.
+
+const objeNew = {
+    a: 10,
+};
+
+const objeTwo = {
+    b: 20,
+};
+
+const getData = function () {
+    return this;
+};
+
+const bindFnOne = getData.bind(objeNew);
+const bindFnTow = getData.bind(objeTwo);
+
+const bindClFn = getData.call(objeNew);
+
+// console.log(bindClFn);
+// console.log(bindFnOne());
+// console.log(bindFnTow());
+
+// Explain the difference between Object.freeze() vs const
+const g = 10;
+const freezeObj = {
+    a: 10,
+};
+
+Object.freeze(freezeObj);
+freezeObj.a = 200;
+// console.log(freezeObj);
+
+// console.log("" + []);
+// console.log({} + {});
+// console.log({} + "1");
+
+//  What are the differences between ES6 class and ES5 function constructors?
+const Person = function (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+};
+
+Person.prototype.getName = function () {
+    return this.firstName;
+};
+
+const objChild = new Person("Dheeraj", "Rawat");
+
+// create a new {}. 2 - function is called this keyword =>  {}. 3 - linkin the prototype to top level object prototype. 4 - function return the {} object.
+
+// console.log(objChild.getName());
+
+class FnCl {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getData() {
+        return this;
+    }
+}
+
+const ClCl = new FnCl("dheeraj", "rawat");
+// console.log(ClCl.getData());
+
+// What is IIFEs (Immediately Invoked Function Expressions)?
+
+// (() => {
+//     console.log(this);
+// })();
+
+// When should I use Arrow Functions in ES6?
+// const gn = function () {
+//     console.log(this);
+// };
+
+// const tn = () => {
+//     console.log(this);
+// };
+// tn();
+
+// Can you describe the main difference between a .forEach loop and a .map() loop and why you would pick one versus the other?
+const Data = [1, 2, 3, 4];
+// Data.forEach((el, idx, array) => {
+//     console.log(el);
+//     console.log(idx, array);
+// });
+
+// const data = Data.map((el, i, array) => {
+//     return el * 10;
+// });
+
+// console.log(data);
+
+// Explain what is Hoisting in Javascript
+// var hois;
+// console.log(hois);
+// hois = 10;
+
+const obk = {
+    a: 10,
+};
+
+var output = (function (x) {
+    delete x.a;
+    return x;
+})(obk);
+
+// console.log(output);
+
+var Employee = {
+    company: "xyz",
+};
+var emp1 = Object.create(Employee);
+delete emp1.company;
+// console.log(emp1);
+// console.log(Employee.company);
+
+// What's the difference between a variable that is: null, undefined or undeclared? How would you go about checking for any of these states?
+
+// genrators in java script
+
+// function* randomValueGanreator() {
+//     while (true) {
+//         yield Math.random();
+//     }
+// }
+// const num = randomValueGanreator();
+// console.log(num.next());
+// console.log(num.next());
+// console.log(num.next());
+// console.log(num.next());
+// console.log(num.next());
+// console.log(num.next());
+// console.log(num.next());
+// console.log(num.next());
+
+function* Genrator() {
+    console.log("before 1");
+    yield 1;
+    console.log("after 1");
+
+    console.log("before 2");
+    yield 2;
+    console.log("after 2");
+}
+
+// const num = Genrator();
+// console.log(num.next());
+// console.log(num.next());
+
+// [-5,-4,-3,-2,-1,0,1,2,3,4,5] => input
+
+const getNumberOfArray = function (array) {
+    for (const arr of array) {
+        for (let i = 1; 1 < array.length; i++) {
+            if (arr + array[i] === 0) {
+                return [arr, array[i]];
+            }
+        }
+    }
+};
+
+// console.log(getNumberOfArray([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]));
+
+const ar = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
+
+const getNumberAr = function (array) {
+    let left = 0;
+    let right = array.length - 1;
+
+    while (left < right) {
+        let sum = array[left] + array[right];
+
+        if (sum === 0) {
+            return [array[left], array[right]];
+        } else if (sum > 0) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+};
+
+// console.log(getNumberAr(ar));
