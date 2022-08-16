@@ -1,3 +1,6 @@
+.eCommerce-banner {
+    background-image: url(../images/ecom-banner.png);
+}
 .web-banner {
     color: var(--dark_blue_cl);
 }
@@ -16,6 +19,20 @@
     -webkit-box-shadow: 2px 4px 52px -21px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 4px 52px -21px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 4px 52px -21px rgba(0, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.85);
+    mix-blend-mode: normal;
+}
+.enterprice_solutions {
+    position: relative;
+}
+.enterprice_solutions .img-div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.enterprice_solutions .reverse {
+    left: 0;
 }
 .para-card .tabs_inner_content {
     padding: 1rem;

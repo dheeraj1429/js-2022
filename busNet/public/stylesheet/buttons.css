@@ -10,10 +10,21 @@
     background-color: var(--dark-blue);
     border: none;
     font-size: 13.2453px;
+    transition: all 0.3s ease;
+}
+.read-more:hover {
+    color: var(--dark-blue);
+    background-color: var(--main-cl);
+    border: 1px solid var(--dark-blue);
 }
 .white_button {
     background-color: var(--main-cl);
     color: var(--dark-cl);
+}
+.white_button:hover {
+    color: var(--main-cl);
+    background-color: var(--dark-blue);
+    border: 1px solid var(--main-cl);
 }
 .read_more {
     padding: 0.8rem 3rem;

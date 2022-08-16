@@ -1,0 +1,32 @@
+.contact_form {
+    background-image: url(../images/contact-us-image.png);
+    background-position: center;
+    background-size: cover;
+}
+.contact_form p {
+    font-size: 22px;
+    color: #544f48;
+}
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form input[type="number"] {
+    width: 100%;
+    height: 65px;
+    padding: 1rem;
+    border: 1px solid #bcbcbc;
+}
+.contact_form textarea {
+    width: 100%;
+    height: 350px;
+    padding: 1rem;
+    border: 1px solid #bcbcbc;
+}
+.contant-div {
+    background-color: var(--dark-blue);
+    padding: 1rem 3rem;
+    border-radius: 15px;
+    position: relative;
+}
+.map {
+    margin-top: -500px;
+}

@@ -21,22 +21,18 @@
     justify-content: center;
     /* align-items: center; */
 }
-
 .banner-section .banner-content {
     padding-top: 150px;
 }
-
 .banner-section h4 {
     font-weight: 400;
     font-size: 55.1887px;
 }
-
 .banner-section h2 {
     font-weight: 600;
     font-size: 74.19px;
     color: var(--dark-blue);
 }
-
 .banner-section p {
     font-size: 19.66px;
 }
@@ -60,11 +56,9 @@
     justify-content: end;
     padding: 1rem;
 }
-
 .our-core-services .image-box > div {
     max-width: 400px;
 }
-
 .our-core-services .image-box h5 {
     color: var(--dark-cl);
     font-size: 42px;
@@ -185,6 +179,9 @@
     margin: 0;
     color: var(--main-cl);
 }
+.tab_div a {
+    text-decoration: none;
+}
 .technology_stack .light-tab {
     background-color: var(--smooth-white-cl);
     /* border-left: 2px solid var(--dark-blue); */
@@ -194,6 +191,12 @@
 }
 .technology_stack .light-tab:hover {
     background-color: var(--dark-blue);
+}
+.technology_stack .light-tab-active {
+    background-color: var(--dark-blue);
+}
+.technology_stack .light-tab-active p {
+    color: var(--main-cl) !important;
 }
 .technology_stack .light-tab:hover p {
     color: var(--main-cl);
@@ -205,6 +208,13 @@
     position: absolute;
     right: 0;
     bottom: -200px;
+}
+.tab-active h3 {
+    color: var(--main-cl) !important;
+}
+.tabs_div:hover {
+    background-color: var(--dark-blue);
+    color: var(--main-cl);
 }
 /* Technology Stack */
 

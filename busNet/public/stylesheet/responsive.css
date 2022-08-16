@@ -67,6 +67,44 @@
     .tab-content-section h2 {
         font-size: 30px;
     }
+    .about-up h5 {
+        font-size: 18px;
+    }
+    .enterprice_solutions .img-div {
+        display: none;
+    }
+    .Our_vision h2 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 56px;
+    }
+    .all_members img {
+        margin-top: -100px;
+    }
+    .about_banner {
+        height: 386px;
+    }
+    .Our_vision .image {
+        display: none;
+    }
+    .server .phone-one {
+        display: none;
+    }
+    .server .phone-tow {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .Our_vision h5 {
+        margin: auto;
+    }
+    .Our_vision br {
+        display: none;
+    }
+    .help_us h1 {
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -78,6 +116,28 @@
     }
     .bg_iamge_div img {
         width: 80%;
+    }
+    .about_team h1 {
+        font-size: 39px;
+    }
+    .technology_stack .tab_div p {
+        font-size: 15px;
+    }
+    .benefits h3 {
+        font-size: 27px;
+    }
+    .long_card p {
+        font-size: 16px;
+    }
+    .explore_our_work h2 {
+        font-size: 24.9477px;
+    }
+    .benefits .tab h4 {
+        font-size: 19px;
+    }
+    .benefits .tab p {
+        font-size: 15px;
+        line-height: 28px;
     }
 }
 
@@ -101,6 +161,16 @@
     .tabs_div .tab-icon-div {
         width: 10%;
     }
+    .banner-section {
+        height: 534px;
+    }
+    .all_members img {
+        margin-top: 0px;
+    }
+    .Our_vision h2 {
+        font-size: 24px;
+        line-height: normal;
+    }
 }
 
 @media (max-width: 700px) {
@@ -113,6 +183,13 @@
     footer .footer-link p {
         font-size: 17px;
     }
+    .enterprice_solutions {
+        padding: 1.5rem 0 !important;
+    }
+    .contant-div {
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
 @media (max-width: 550px) {
@@ -123,6 +200,12 @@
     }
     .our-core-services .image-box {
         height: 835px;
+    }
+    .about_team h1 {
+        font-size: 19px;
+    }
+    .tabs_div {
+        margin: 0.5rem 0;
     }
 }
 

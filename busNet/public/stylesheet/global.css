@@ -30,3 +30,8 @@ body {
 .side_padding_two {
     padding: 0 100px;
 }
+
+.banner-line {
+    max-width: 60% !important;
+    height: 5px !important;
+}
