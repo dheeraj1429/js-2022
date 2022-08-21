@@ -1,6 +1,6 @@
 // qution ?
 // 01:02 PM -> 13:02
-// 02:11 AM
+// 02:11 AM -> 02:11
 
 const checkTimeFucntion = function (time12h) {
     let [time, modifire] = time12h.split(" ");
@@ -31,6 +31,8 @@ const obj = {
     },
 };
 
+// window
+
 // console.log(obj.greed());
 // console.log(obj.morning());
 
@@ -46,7 +48,7 @@ const checkFunction = function (ar) {
             }
         }
     }
-};
+}; // n(o^2)
 
 const chekcSumFunction = function (ar) {
     let left = 0;
@@ -74,6 +76,7 @@ const ar = [-5, -4, -3, -2, -1, 0, 2, 4, 4, 4];
 const isAnagram = function (string1, string2) {
     if (string1.length !== string2.length) return false;
     let obj = {};
+
     for (let letters of string1) {
         obj[letters] = (obj[letters] || 0) + 1;
     }
@@ -91,16 +94,22 @@ const isAnagram = function (string1, string2) {
 };
 
 // console.log(isAnagram("dheeraj", "eerjadh"));
+// { d: 1, h: 1, e: 2, r: 1, a: 1, j: 1 }
 
 // qution ?
 // Counting Unique Numbers Problem
 
 const checkUnique = function (ar) {
     let uni = [];
-    let k = 0;
+
     for (let i = 0; i < ar.length; i++) {
-        k++;
-        if (ar[k] !== ar[i]) {
+        if (uni.indexOf(ar[i]) === -1) {
+            uni.push(ar[i]);
+        }
+    }
+
+    for (let i = 0; i < ar.length - 1; i++) {
+        if (ar.indexOf(ar[i]) === i) {
             uni.push(ar[i]);
         }
     }
@@ -108,55 +117,81 @@ const checkUnique = function (ar) {
     return uni;
 };
 
-const arNew = [1, 1, 2, 2, 3, 4, 4, 5, 5, 9, 9];
+const arNew = [1, 10, 11, 11, 1, 3, 4, 5, 2, 1];
 // console.log(checkUnique(arNew));
 
 // qution ?
 // Divide & Conquerer Technique
 
-const algo = function (array, num) {
+//////////////////////////////////////////////////////////////////////
+
+/*
+  [1,2,3,4,5,6,7,8,9,10], n = 2;
+  mid = l + R / 2 => half of the array = 5;
+  mid > n => L = mid  - 1; L = 4; 
+  mid < n => L = mid + 1; 6;
+  return mid;
+*/
+
+const algo = function (ar, n) {
     let min = 0;
-    let max = array.length - 1;
+    let max = ar.length - 1;
 
     while (min <= max) {
-        let midIndex = Math.floor((min + max) / 2);
+        const mid = Math.floor((min + max) / 2);
 
-        if (array[midIndex] > num) {
-            return (min = midIndex - 1);
-        } else if (array[midIndex] < num) {
-            return (min = midIndex + 1);
+        if (mid > n) {
+            return (min = mid - 1);
+        } else if (mid < n) {
+            return (min = mid + 1);
         } else {
-            return midIndex;
+            return mid;
         }
     }
-
-    return -1;
 };
 
-const result = algo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], 7);
+const result = algo([12, 11, 16, 10], 11);
+
 // console.log(result);
+
+// sum of array of elements
+const getReduceSum = function (ar) {
+    let sum = 0;
+
+    for (let i = 0; i < ar.length; i++) {
+        sum += ar[i]["a"];
+    }
+
+    return sum;
+};
+
+const sumAr = [{ a: 10 }, { a: 20 }, { a: 40 }, { a: 50 }];
+// console.log(getReduceSum(sumAr));
+
+//////////////////////////////////////////////////////////////////////
 
 // qution ?
 // Check Square Elements of Another Array
-const firstArr = [1, 2, 3, 4];
-const secondArr = [1, 4, 9, 16];
 
 const checkSqure = function (arrFirst, arrSecond) {
+    let isSqure = false;
     for (let i = 0; i < arrFirst.length; i++) {
-        let isSqure = false;
         for (let j = 0; j < arrSecond.length; j++) {
             if (arrFirst[i] * arrFirst[i] === arrSecond[j]) {
                 isSqure = true;
             }
 
-            if (j === arrSecond.length - 1) {
-                if (!isSqure) return false;
+            if ((j = arrSecond.length - 1)) {
+                if (!isSqure) return true;
             }
         }
-    }
+    } // O(n^2) // we want to make a o(n)
 
-    return true;
+    return false;
 };
+
+const firstArr = [1, 2, 2, 4];
+const secondArr = [1, 4, 4, 16];
 
 // console.log(checkSqure(firstArr, secondArr));
 
@@ -164,23 +199,30 @@ const checkSqure = function (arrFirst, arrSecond) {
 const checkSqureFunction = function (arr1, arr2) {
     let map1 = {};
     let map2 = {};
+    let isSqure = false;
 
-    for (let items of arr1) {
-        map1[items] = (map1[items] || 0) + 1;
+    for (let i = 0; i < arr1.length; i++) {
+        map1[arr1[i]] = (map1[arr1[i]] || 0) + 1;
     }
-    for (let itmes of arr2) {
-        map2[itmes] = (map2[itmes] || 0) + 1;
+
+    for (let j = 0; j < arr2.length; j++) {
+        map2[arr2[j]] = (map2[arr2[j]] || 0) + 1;
     }
+
     for (let key in map1) {
-        if (!map2[key * key]) {
-            return false;
+        if (map2[key * key] === map1[key]) {
+            map1[key] = map1[key] - map2[key * key];
         }
 
-        if (map1[key] !== map2[key * key]) {
-            return false;
+        if (map1[key] === 0) {
+            isSqure = true;
+        } else {
+            isSqure = false;
+            break;
         }
     }
-    return true;
+
+    return isSqure;
 };
 
 // console.log(checkSqureFunction(firstArr, secondArr));
@@ -224,19 +266,24 @@ function primeFactors(n) {
 
 // qution ?
 // Program for Fibonacci numbers
+
 const num = 200;
 
-let x = 0;
-let y = 1;
+const getFibonacciNumbers = function (number) {
+    let a = 0;
+    let b = 1;
+    let sum = a + b;
 
-let fn = x + y;
-while (fn < num) {
-    fn = x + y;
-    x = y;
-    y = fn;
+    while (sum < number) {
+        sum = a + b; // 1 -> 2 + 1 -> 3
+        a = b; // a = 0, b = 1, a = 1
+        b = sum; // b = 1, sum = 2, b = 2;
 
-    // console.log(fn);
-}
+        // console.log(sum);
+    }
+};
+
+// console.log(getFibonacciNumbers(num));
 
 const str = "dhrj";
 
@@ -323,13 +370,15 @@ const febonic = function (num) {
 const arn = [1, 3, 2, 5, 6, 7, 3, 8, 10, 8];
 
 // qution ?
-const checkLarger = function (number) {
-    let temp = 0;
-    for (let i = 0; i < number.length; i++) {
-        if (temp < number[i]) {
-            temp = number[i];
+const checkLarger = function (ar) {
+    let temp = ar[0];
+
+    for (let i = 0; i < ar.length; i++) {
+        if (temp < ar[i]) {
+            temp = ar[i];
         }
-    }
+    } // o(n)
+
     return temp;
 };
 
@@ -350,22 +399,21 @@ const rec = function (number) {
 // const resultN = rec(10);
 // console.log(resultN);
 
-{
-    const arm = [1, 4, 2, 5, 1, 9];
-
-    // [1,2,4,5] => swipe
-    let temp = 0;
-    for (let i = 0; i < arm.length; i++) {
-        for (let j = 0; j < arm.length; j++) {
-            if (arm[i] > arm[j]) {
-                temp = arm[i];
+const shortFn = function (ar) {
+    for (let i = 0; i < ar.length; i++) {
+        for (let j = 0; j < ar.length; j++) {
+            if (ar[i] < ar[j]) {
+                [ar[i], ar[j]] = [ar[j], ar[i]];
             }
         }
     }
-    // console.log(temp);
-}
+
+    return ar;
+};
 
 const noSortedAr = [1, 3, 2, 4, 5, 30, 10, 1, 10, 20, 5];
+
+// console.log(shortFn(noSortedAr));
 
 // qution ?
 // [1,2,3,4] -> swipe
@@ -401,31 +449,33 @@ const sort = function (arr) {
 
 // qution ?
 const greatestCommonDivisor = function (number1, number2) {
-    let devOne = [];
-    let devTow = [];
+    const firstNumberFector = [];
+    const secondNumberFector = [];
 
-    for (let i = 1; i <= number1; i++) {
+    for (let i = 0; i < number1; i++) {
         if (number1 % i === 0) {
-            devOne.push(i);
+            firstNumberFector.push(i);
         }
     }
 
-    for (let i = 1; i <= number2; i++) {
+    for (let i = 0; i < number2; i++) {
         if (number2 % i === 0) {
-            devTow.push(i);
+            secondNumberFector.push(i);
         }
     }
 
-    for (let z = devOne.length - 1; z >= 0; z--) {
-        for (let x = devTow.length - 1; x >= 0; x--) {
-            if (devOne[z] === devTow[x]) {
-                return devOne[z];
+    for (let i = firstNumberFector.length - 1; i >= 0; i--) {
+        for (let j = secondNumberFector.length - 1; j >= 0; j--) {
+            if (firstNumberFector[i] === secondNumberFector[j]) {
+                return firstNumberFector[i];
             }
         }
-    }
+    } // o(n^2)
+
+    // o(n)
 };
 
-// console.log(greatestCommonDivisor(14, 21)); // 7
+// console.log(greatestCommonDivisor(20, 10)); // 5
 // console.log(greatestCommonDivisor(69, 169)); // 1
 
 // qution ?
@@ -512,17 +562,24 @@ const reverseInPlace = function (str) {
 
 // First non repeating char
 
-const firstNonRepeatChar = function (str) {
+const removeDuplicateSubString = function (str) {
+    let ar = [];
+    let unique = [];
+
     for (let i = 0; i < str.length; i++) {
-        let char = str[i];
-        // console.log(i + 1, str.indexOf(char));
-        if (str.indexOf(char, i + 1) === -1) {
-            return char;
+        ar.push(str[i]);
+    }
+
+    for (let i = 0; i < ar.length; i++) {
+        if (unique.indexOf(str[i]) === -1) {
+            unique.push(str[i]);
         }
     }
+
+    return unique;
 };
 
-// console.log(firstNonRepeatChar("the qtuick brown fox")); // done but don't know how ?
+// console.log(removeDuplicateSubString("tthhis"));
 
 // qution ?
 // check palindrome
@@ -540,17 +597,42 @@ const isPalindrome = function (str) {
 
 // console.log(5 + ((Math.random() * 4 + 1) / 5) * 2);
 
+// find the missing numbers from the array?
+
 const missingNumber = function (arr) {
-    let n = arr.length + 1;
-    let total = (n * (n + 1)) / 2;
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
+    let minEm, maxEm;
+    let maxAr = arr.slice();
+    let minArr = arr.slice();
+    const missingElements = [];
+
+    for (let i = 0; i < maxAr.length; i++) {
+        for (let j = 0; j < maxAr.length; j++) {
+            if (maxAr[i] < maxAr[j]) {
+                maxAr[i] = maxAr[j];
+                maxEm = maxAr[i];
+            }
+        }
     }
-    return total - sum;
+
+    for (let i = 0; i < minArr.length; i++) {
+        for (let j = 0; j < minArr.length; j++) {
+            if (minArr[i] > minArr[j]) {
+                minArr[i] = minArr[j];
+                minEm = minArr[i];
+            }
+        }
+    }
+
+    for (let i = minEm; i < maxEm; i++) {
+        if (arr.indexOf(i) === -1) {
+            missingElements.push(i);
+        }
+    }
+
+    return missingElements;
 };
 
-// console.log(missingNumber([1, 3, 4, 5]));
+// console.log(missingNumber([1, 2, 3, 5, 10, 8]));
 
 const sumFinder = function (array, number) {
     let n = array.length;
@@ -568,3 +650,164 @@ const sumFinder = function (array, number) {
 
 // console.log(sumFinder([6, 4, 3, 2, 1, 7], 9));
 // console.log(sumFinder([6, 4, 3, 2, 1, 7], 2));
+
+// time complexity o(n2)
+
+// const chekcSumFu = function (array, number) {
+//     let n = array.length;
+//     let left = 0;
+//     let right = array.length - 1;
+
+//     while (left < right) {
+//         let sum = array[left] + array[right];
+
+//         if (sum === number) {
+//             console.log(array[left], array[right]);
+//             return true;
+//         } else {
+//             console.log(right, left);
+//             right--;
+//         }
+//     }
+
+//     // return false;
+// };
+
+// console.log(chekcSumFu([4, 4, 3, 5, 1, 7], 9));
+
+////////////////////////////////////////////////////////
+/*
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+
+Input: s = "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
+
+Input: s = "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+*/
+
+const countSum = function (str) {
+    const map = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000,
+    };
+
+    const properCase = str.toUpperCase().split("");
+    let sum = 0;
+    for (let i = 0; i < properCase.length; i++) {
+        sum += map[properCase[i]];
+    }
+    return sum;
+};
+// countSum("LVIII");
+
+// [1, 3, 4, 2];
+// [0, 1, 2, 3];
+
+// find the substring index wihtout indexOf method
+/*
+    'abcdefg', 'cd'
+    [ab, cd, ef, g], cd,
+    i += 0 -> 1 -> 2 -> = 2 
+*/
+
+// for (var i = 0; i < 3; i++) {
+//     console.log(i)
+//     setTimeout(() => {
+//         console.log(i)
+//     }, 1000 + i);
+// }
+
+const removeDuplicateChar = function (str) {
+    const set = [];
+
+    for (let i = 0; i < str.length; i++) {
+        if (set.indexOf(str[i]) === -1) {
+            set.push(str[i]);
+        }
+    }
+
+    return set.join("");
+};
+
+// removeDuplicateChar('this is me some new text');
+
+///////////////////////////////////////////
+
+// reverse the string
+const reverseStrFn = function (str) {
+    let rev = [];
+
+    for (let i = str.length; i >= 0; i--) {
+        rev.push(str[i]);
+    }
+
+    return rev.join("");
+};
+
+// console.log(reverseStrFn("this is new"));
+
+const firstNonRepeatedCharacter = function (string) {
+    for (let i = 0; i < string.length; i++) {
+        console.log(string.charAt(i));
+    }
+};
+
+var someString = "aabcbd";
+// console.log(firstNonRepeatedCharacter(someString));
+
+function firstNotRepeatingCharacter(s) {
+    for (let i = 0; i < s.length; i++) {
+        console.log(s.indexOf(s[i]), s.lastIndexOf(s[i]));
+    }
+}
+
+// console.log(firstNotRepeatingCharacter("tthherrt"));
+
+const insertFunction = function (position, place, element = null) {
+    // const a = [1, 2, 3];
+    // a.splice(1, 0, 4); //  1 -> add on 1 position, 0 -> we don't want to remove anything from the array, 4 -> i want to add this element into the array.
+    // return a;
+
+    const a = [1, 2, 3, 4];
+    let newAr = [];
+
+    if (!!element) {
+        if (!!position) {
+            for (let i = 0; i < a.length; i++) {
+                if (place === i) {
+                    newAr.push(element);
+                }
+                newAr.push(a[i]);
+            }
+            return newAr;
+        } else return a;
+    } else {
+        if (!!position) {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] !== place) {
+                    newAr.push(a[i]);
+                }
+            }
+        } else {
+            return a;
+        }
+    }
+
+    return newAr;
+};
+
+// console.log(insertFunction(1, 3, 5));
