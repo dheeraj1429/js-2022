@@ -23,13 +23,16 @@ const obj = {
     name: "dheeraj sing",
 
     greed() {
-        return this;
+        return this.a;
     },
 
     morning: () => {
-        return this;
+        return this.a;
     },
 };
+
+// console.log(obj.morning()); // window
+// console.log(obj.greed()); // object
 
 // window
 
@@ -67,7 +70,7 @@ const chekcSumFunction = function (ar) {
     }
 };
 
-const ar = [-5, -4, -3, -2, -1, 0, 2, 4, 4, 4];
+// const ar = [-5, -4, -3, -2, -1, 0, 2, 4, 4, 4];
 // console.log(chekcSumFunction(ar));
 // console.log(checkFunction(ar));
 
@@ -89,11 +92,11 @@ const isAnagram = function (string1, string2) {
         obj[items] -= 1;
     }
 
-    //     console.log(obj);
+    // console.log(obj);
     return true;
 };
 
-// console.log(isAnagram("dheeraj", "eerjadh"));
+// console.log(isAnagram("dheeraj", "eerjdh"));
 // { d: 1, h: 1, e: 2, r: 1, a: 1, j: 1 }
 
 // qution ?
@@ -119,40 +122,6 @@ const checkUnique = function (ar) {
 
 const arNew = [1, 10, 11, 11, 1, 3, 4, 5, 2, 1];
 // console.log(checkUnique(arNew));
-
-// qution ?
-// Divide & Conquerer Technique
-
-//////////////////////////////////////////////////////////////////////
-
-/*
-  [1,2,3,4,5,6,7,8,9,10], n = 2;
-  mid = l + R / 2 => half of the array = 5;
-  mid > n => L = mid  - 1; L = 4; 
-  mid < n => L = mid + 1; 6;
-  return mid;
-*/
-
-const algo = function (ar, n) {
-    let min = 0;
-    let max = ar.length - 1;
-
-    while (min <= max) {
-        const mid = Math.floor((min + max) / 2);
-
-        if (mid > n) {
-            return (min = mid - 1);
-        } else if (mid < n) {
-            return (min = mid + 1);
-        } else {
-            return mid;
-        }
-    }
-};
-
-const result = algo([12, 11, 16, 10], 11);
-
-// console.log(result);
 
 // sum of array of elements
 const getReduceSum = function (ar) {
@@ -576,7 +545,7 @@ const removeDuplicateSubString = function (str) {
         }
     }
 
-    return unique;
+    return unique.join("");
 };
 
 // console.log(removeDuplicateSubString("tthhis"));
@@ -600,26 +569,15 @@ const isPalindrome = function (str) {
 // find the missing numbers from the array?
 
 const missingNumber = function (arr) {
-    let minEm, maxEm;
-    let maxAr = arr.slice();
-    let minArr = arr.slice();
+    let minEm = arr[0],
+        maxEm = arr[arr.length - 1];
     const missingElements = [];
 
-    for (let i = 0; i < maxAr.length; i++) {
-        for (let j = 0; j < maxAr.length; j++) {
-            if (maxAr[i] < maxAr[j]) {
-                maxAr[i] = maxAr[j];
-                maxEm = maxAr[i];
-            }
-        }
-    }
-
-    for (let i = 0; i < minArr.length; i++) {
-        for (let j = 0; j < minArr.length; j++) {
-            if (minArr[i] > minArr[j]) {
-                minArr[i] = minArr[j];
-                minEm = minArr[i];
-            }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxEm) {
+            maxEm = arr[i];
+        } else if (arr[i] < minEm) {
+            minEm = arr[i];
         }
     }
 
@@ -811,3 +769,89 @@ const insertFunction = function (position, place, element = null) {
 };
 
 // console.log(insertFunction(1, 3, 5));
+
+//////////////////////////////////////////////////////////////
+const findDupes = function (ar) {
+    let dup = ar[0];
+    for (let i = 0; i < ar.length; i++) {
+        if (ar.indexOf(ar[i]) == dup) {
+            dup = ar[i];
+        }
+    }
+    return dup;
+};
+
+// console.log(findDupes([1, 2, 3, 4, 5, 6, 7, 7, 8, 6, 10]));
+
+const findMaxMin = function (arr) {
+    let max = arr[arr.length - 1],
+        min = arr[0];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        } else if (arr[i] < min) {
+            min = arr[i];
+            2;
+        }
+    } // o(n) o(1)
+
+    console.log(max, min);
+};
+
+// console.log(findMaxMin([1, 2, 3, 400, 100]));
+
+const returnMultipleDupesArray = function (ar) {
+    let observered = {};
+    let duplicates = [];
+
+    for (let i = 0; i < ar.length; i++) {
+        observered[ar[i]] = (observered[ar[i]] || 0) + 1;
+
+        if (observered[ar[i]] > 1) {
+            if (duplicates.indexOf(ar[i]) == -1) {
+                duplicates.push(ar[i]);
+            }
+        }
+    }
+
+    console.log(duplicates);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+
+let people = [
+    { name: "first person", age: 20 },
+    { name: "second person", age: 20 },
+    { name: "thred person", age: 30 },
+];
+
+const createGroupFunction = function (arr) {
+    const convertObj = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        if (!convertObj[arr[i].age]) {
+            convertObj[arr[i].age] = [arr[i]];
+        } else {
+            // if the object is not exists in convertObj then push the object into the convert obj
+            convertObj[arr[i].age].push(arr[i]);
+        }
+    }
+
+    return convertObj;
+};
+
+// console.log(createGroupFunction(people));
+
+/*
+    {
+        '20': [{name: 'x', age: 20}, {name: "y", age: 20}],
+        '30': [{name: 'z', age: 30}]
+    }
+*/
+
+// 4. Find the pairs of array element for which sum is equal to given target value (Two Sum Problem) ?
+
+// const pairsAr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// https://blog.bitsrc.io/most-important-javascript-coding-challenge-aa14c956d2df
